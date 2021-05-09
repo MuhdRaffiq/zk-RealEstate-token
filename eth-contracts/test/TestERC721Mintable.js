@@ -19,7 +19,6 @@ contract('TestERC721Mintable', accounts => {
             await this.contract.mint(account_three, 6);
       });
 
-        })
 
         it('should return total supply', async function () { 
 
@@ -76,4 +75,4 @@ contract('TestERC721Mintable', accounts => {
         })
 
     });
-})
+});
