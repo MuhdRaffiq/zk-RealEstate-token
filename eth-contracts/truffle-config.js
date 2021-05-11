@@ -24,7 +24,7 @@
  //const fs = require('fs');
  //const mnemonic = fs.readFileSync(".secret").toString().trim();
 
- //const mnemonic = "select nut echo alert shoulder flower document install oil page comfort move";
+ const mnemonic = "select nut echo alert shoulder flower document install oil page comfort move";
 
 module.exports = {
   /**
