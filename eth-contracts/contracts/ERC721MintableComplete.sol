@@ -11,15 +11,15 @@ contract Ownable {
     //  1) create a private '_owner' variable of type address with a public getter function
     address public owner;
 
-    function getOwner () public view returns (address) {
-        return owner;
-    }
-
     //  2) create an internal constructor that sets the _owner var to the creater of the contract 
 
     constructor () public {
         owner = msg.sender;
 
+    }
+
+    function getOwner () public view returns (address) {
+        return owner;
     }
     //  3) create an 'onlyOwner' modifier that throws if called by any account other than the owner.
 
@@ -267,7 +267,7 @@ contract ERC721 is Pausable, ERC165 {
     function _mint(address to, uint256 tokenId) internal {
 
         // TODO revert if given tokenId already exists or given address is invalid
-        require(_tokenOwner[tokenId] == address(0) && Address.isContract(to) && to != address(0),"require tokenId to exists, valid address, and not empty address");
+        require(_tokenOwner[tokenId] == address(0) && to != address(0),"require tokenId to exists, valid address, and not empty address");
   
         // TODO mint tokenId to given address & increase token count of owner
         _tokenOwner[tokenId] = to;
@@ -285,7 +285,7 @@ contract ERC721 is Pausable, ERC165 {
         require(_tokenOwner[tokenId] == from, "Require the from address to be the owner of the tokenId");
 
         // TODO: require token is being transfered to valid address
-        require(Address.isContract(to) && to != address(0), "invalid address");
+        //require(Address.isContract(to) && to != address(0), "invalid address");
 
         // TODO: clear approval
         _clearApproval(tokenId);
