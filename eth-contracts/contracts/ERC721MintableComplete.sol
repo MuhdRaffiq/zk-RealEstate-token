@@ -574,6 +574,7 @@ contract ERC721MintableComplete is ERC721Metadata {
     string private baseTokenURI = "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/";
 
     constructor (string memory name, string memory symbol) ERC721Metadata(name, symbol, baseTokenURI) public {
+        
     }
 
     function mint(address to, uint256 tokenId) public onlyOwner returns (bool) {
