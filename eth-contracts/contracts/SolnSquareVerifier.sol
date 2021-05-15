@@ -33,7 +33,7 @@ contract SolnSquareVerifier is ERC721MintableComplete {
     solution[] solutions;
 
     // TODO define a mapping to store unique solutions submitted
-    mapping(bytes32 => solution) solutionSubmitted; 
+    mapping(bytes32 => bool) solutionSubmitted; 
     mapping(uint256 => uint256) tokenIdIndex;
 
 
@@ -44,7 +44,9 @@ contract SolnSquareVerifier is ERC721MintableComplete {
     function addSolutions(uint256 _tokenId, address _sender, uint[2] memory a, uint[2][2] memory b, uint[2] memory c, uint[2] memory input) public {
 
         bytes32 solhash = keccak256(abi.encodePacked(a, b, c, input));
-        require(solutionSubmitted[solhash].exists == false, "Solution exists already");
+        require(!solutionSubmitted[solhash], "Solution is unique");
+
+        solutionSubmitted[solhash] = true;
 
         bool verified = squareVerifier.verifyTx(a, b, c, input);
         require(verified, "Solution could not be verified");
@@ -64,6 +66,7 @@ contract SolnSquareVerifier is ERC721MintableComplete {
 
         // Map tokenId to added solution
         tokenIdIndex[_tokenId] = _index;
+        
 
         emit SolutionSubmited(_tokenId, _sender, solhash);
     }
