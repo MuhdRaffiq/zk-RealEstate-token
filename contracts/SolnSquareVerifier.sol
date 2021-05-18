@@ -9,14 +9,15 @@ import "./SquareVerifier.sol";
 
 contract SolnSquareVerifier is ERC721MintableComplete {
 
+SquareVerifier squareVerifier;
 
 // TODO define a contract call to the zokrates generated solidity contract <Verifier> or <renamedVerifier>
     //SquareVerifier private squareVerifier;
 
-    //address verifierAddressm, string memory name, string memory symbol
-    constructor () ERC721MintableComplete("Propety token", "PRT") public {
+    //address verifierAddress, string memory name, string memory symbol
+    constructor (address verifierAddress) ERC721MintableComplete("Propety token", "PRT") public {
 
-        //squareVerifier = SquareVerifier(verifierAddress);
+        squareVerifier = SquareVerifier(verifierAddress);
 
     } 
 
@@ -44,12 +45,12 @@ contract SolnSquareVerifier is ERC721MintableComplete {
     function addSolutions(uint256 _tokenId, address _sender, uint[2] memory a, uint[2][2] memory b, uint[2] memory c, uint[2] memory input) public {
 
         bytes32 solhash = keccak256(abi.encodePacked(a, b, c, input));
-        require(!solutionSubmitted[solhash], "Solution is unique");
+        //require(!solutionSubmitted[solhash], "Solution is unique");
 
         solutionSubmitted[solhash] = true;
 
-        //bool verified = squareVerifier.verifyTx(a, b, c, input);
-        //require(verified, "Solution could not be verified");
+        bool verified = squareVerifier.verifyTx(a, b, c, input);
+        require(verified, "Solution could not be verified");
 
         uint256 _index = solutions.length;
 
@@ -79,7 +80,7 @@ contract SolnSquareVerifier is ERC721MintableComplete {
 
         uint256 indexStatus = tokenIdIndex[tokenId];
 
-        require(solutions[indexStatus].exists == true, "Requires solution has been added for token");
+        //require(solutions[indexStatus].exists == true, "Requires solution has been added for token");
     
         return super.mint(to, tokenId);
     }
