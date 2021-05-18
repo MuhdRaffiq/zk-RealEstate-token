@@ -4,7 +4,7 @@ The capstone will build upon the knowledge you have gained in the course in orde
 
 # Contract addresses on rinkeby test network
 
-https://github.com/MuhdRaffiq/zk-RealEstate-token/blob/master2/Contract%20addresses.PNG
+![]Contract%20addresses.PNG
 
 # Project Resources
 
