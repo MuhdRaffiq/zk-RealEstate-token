@@ -6,6 +6,10 @@ The capstone will build upon the knowledge you have gained in the course in orde
 
 ![](Contract%20addresses.PNG)
 
+# Opensea StoreFront
+
+Storefront - https://testnets.opensea.io/collection/unidentified-contract-5h0zbrldop
+
 # Project Resources
 
 * [Remix - Solidity IDE](https://remix.ethereum.org/)
