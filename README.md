@@ -21,7 +21,7 @@ Storefront - https://testnets.opensea.io/collection/unidentified-contract-5h0zbr
 * [Docker](https://docs.docker.com/install/)
 * [ZoKrates](https://github.com/Zokrates/ZoKrates)
 
-#Versions
+# Versions
 
 * Truffle v5.3.6 (core: 5.3.6)
 * Solidity - 0.5.1 (solc-js)
