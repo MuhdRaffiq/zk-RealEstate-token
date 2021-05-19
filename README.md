@@ -9,7 +9,8 @@ The capstone will build upon the knowledge you have gained in the course in orde
 # Opensea StoreFront
 
 Storefront - https://testnets.opensea.io/collection/unidentified-contract-5h0zbrldop
-wallet that bought 5 NFT tokens issued here: 0x4b1bba174df54096ac04a589e234dcb4e109023c
+
+Wallet that bought 5 NFT tokens through the OpenSea storefront: 0x4b1bbA174DF54096Ac04A589E234Dcb4e109023C
 
 # Run Test
 
