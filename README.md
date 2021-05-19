@@ -8,6 +8,8 @@ SquareVerifier Contract Address: 0xa3035A9A21b367447649a3105cB5C428a34A2843
 
 SolnSquareVerifier Contract Address: 0x5d6DFCf9bBf35ee55A63851cA8E5F73D2f1a0191
 
+[Link SolnSquareVerifier address](https://rinkeby.etherscan.io/address/0x5d6DFCf9bBf35ee55A63851cA8E5F73D2f1a0191)
+
 ![](Contract%20addresses.PNG)
 
 # Opensea StoreFront
