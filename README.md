@@ -9,6 +9,27 @@ The capstone will build upon the knowledge you have gained in the course in orde
 # Opensea StoreFront
 
 Storefront - https://testnets.opensea.io/collection/unidentified-contract-5h0zbrldop
+wallet that bought 5 NFT tokens issued here: 0x4b1bba174df54096ac04a589e234dcb4e109023c
+
+# Run Test
+
+`npm i`
+
+install the necessary package
+
+`truffle develop`
+
+run local blockchain on the computer
+
+`truffle compile` 
+
+compile the smart contracts code and see if there is any bug
+
+`test`
+
+type test and click enter to run the test and received result down here
+
+![](testpassed.PNG)
 
 # Project Resources
 
@@ -20,6 +41,14 @@ Storefront - https://testnets.opensea.io/collection/unidentified-contract-5h0zbr
 * [Interactive zero knowledge 3-colorability demonstration](http://web.mit.edu/~ezyang/Public/graph/svg.html)
 * [Docker](https://docs.docker.com/install/)
 * [ZoKrates](https://github.com/Zokrates/ZoKrates)
+
+# ABI Links
+
+[- SolnSquareVerifier.sol](https://github.com/MuhdRaffiq/zk-RealEstate-token/blob/master2/build/contracts/SolnSquareVerifier.json)
+
+
+
+[- SquareVerifier.sol](https://github.com/MuhdRaffiq/zk-RealEstate-token/blob/master2/build/contracts/SquareVerifier.json)
 
 # Versions
 
