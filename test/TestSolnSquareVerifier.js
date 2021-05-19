@@ -1,10 +1,11 @@
 const SolnSquareVerifier = artifacts.require('SolnSquareVerifier');
+const SquareVerifier = artifacts.require('SquareVerifier');
 const zokratesProof = require("../zokrates/code/square/proof.json");
 
 contract('TestSolnSquareVerifier', accounts => {
     describe('Testing SolnSquareVerifier', function () {
       beforeEach(async function () { 
-        this.contract = await SolnSquareVerifier.new();
+        this.contract = await SolnSquareVerifier.new(SquareVerifier.address);
       });
 
       // Test if a new solution can be added for contract - SolnSquareVerifier
